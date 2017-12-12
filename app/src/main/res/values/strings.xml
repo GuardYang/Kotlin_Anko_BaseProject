@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">插件化</string>
+    <string name="hint_name">请输入用户名</string>
+    <string name="hint_password">请输入密码</string>
+</resources>
