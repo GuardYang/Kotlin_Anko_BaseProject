@@ -1,9 +1,9 @@
 package com.ysr.app.base
 
-import android.app.Application
 import android.content.Context
 import android.support.multidex.MultiDex
 import com.alibaba.android.arouter.launcher.ARouter
+import com.qihoo360.replugin.RePluginApplication
 import com.ysr.app.BuildConfig
 
 /**
@@ -12,7 +12,7 @@ import com.ysr.app.BuildConfig
  * 邮箱 yangshirong@log56.com
  */
 
-class App : Application() {
+class App : RePluginApplication() {
     override fun onCreate() {
         super.onCreate()
         if (BuildConfig.LOG_DEBUG) {           // 这两行必须写在init之前，否则这些配置在init过程中将无效

@@ -1,7 +1,7 @@
 package com.ysr.app.moudle.view.activity
 
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.alibaba.android.arouter.launcher.ARouter
+import com.qihoo360.replugin.RePlugin
 import com.ysr.app.R
 import com.ysr.app.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_login.*
@@ -18,9 +18,12 @@ class LoginActivity : BaseActivity() {
 
     override fun initPresenter() {
         button.setOnClickListener({
-            ARouter.getInstance().build("/ui/AnkoRegisterActivity").navigation()
+            intent()
+//            ARouter.getInstance().build("/ui/AnkoRegisterActivity").navigation()
         })
     }
-
+    private fun intent() {
+        RePlugin.startActivity(this@LoginActivity, RePlugin.createIntent("firstapp", "com.ysr.repluginchildone.MainActivity"))
+    }
 
 }

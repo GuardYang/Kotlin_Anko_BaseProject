@@ -11,6 +11,7 @@ buildscript {
      arouter_api_version = '1.2.4'
      arouter_compiler_version = '1.1.4'
      anko_version='0.10.3'
+     replugin_host_lib_version='2.2.1'
     }
 
     repositories {
@@ -20,7 +21,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
+        classpath 'com.qihoo360.replugin:replugin-host-gradle:2.2.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

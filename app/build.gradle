@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-
+apply plugin: 'replugin-host-gradle'
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -39,7 +39,7 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
     kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
     compile "com.alibaba:arouter-api:$arouter_api_version"
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile "com.qihoo360.replugin:replugin-host-lib:$replugin_host_lib_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
