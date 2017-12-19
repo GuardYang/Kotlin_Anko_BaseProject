@@ -19,10 +19,11 @@ abstract class CustemCallBack<T> : Callback<T> {
     }
 
     override fun onFailure(call: Call<T>?, t: Throwable?) {
-        onFail(t?.message as String)
+        //强转在三星C7 6.0上出错
+        onFail(t?.message as?  String)
     }
 
     abstract fun onSuccess(response: Response<T>?)
 
-    abstract fun onFail(message: String)
+    abstract fun onFail(message: String?)
 }
