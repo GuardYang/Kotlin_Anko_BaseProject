@@ -49,11 +49,14 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation "org.jetbrains.anko:anko:$anko_version"
     implementation "com.android.support:appcompat-v7:$appcompat_v7_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile "com.android.support:multidex:$multidex_version"
     implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
     kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
     compile "com.alibaba:arouter-api:$arouter_api_version"
     compile "com.qihoo360.replugin:replugin-host-lib:$replugin_host_lib_version"
+    compile "com.google.dagger:dagger:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'

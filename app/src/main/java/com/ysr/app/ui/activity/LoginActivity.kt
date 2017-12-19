@@ -1,6 +1,7 @@
 package com.ysr.app.ui.activity
 
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.qihoo360.replugin.RePlugin
 import com.ysr.app.R
 import com.ysr.app.base.BaseActivity
@@ -18,11 +19,12 @@ class LoginActivity : BaseActivity() {
 
     override fun initPresenter() {
         button.setOnClickListener({
-            intent()
-//            ARouter.getInstance().build("/ui/AnkoRegisterActivity").navigation()
+//            intent()
+            ARouter.getInstance().build("/ui/UploadImgActivity").navigation()
         })
     }
     private fun intent() {
+        //打开插件
         RePlugin.startActivity(this@LoginActivity, RePlugin.createIntent("firstapp", "com.ysr.repluginchildone.MainActivity"))
     }
 
