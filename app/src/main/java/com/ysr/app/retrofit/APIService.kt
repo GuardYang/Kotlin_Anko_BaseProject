@@ -1,9 +1,12 @@
 package com.ysr.app.retrofit
 
 import retrofit2.Call
+import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.POST
 import retrofit2.http.Query
+import rx.Observable
+
 
 /**
  * @author yangshirong
@@ -16,4 +19,8 @@ interface APIService {
     fun searchData(@Query("RequestData") RequestData: String,
                    @Query("DataSign") DataSign: String
     ): Call<String>
+
+    @GET("homePageApi/homePage.do")
+    fun getHomePage(@Query("RequestData") RequestData: String,
+                    @Query("DataSign") DataSign: String): Observable<String>
 }
