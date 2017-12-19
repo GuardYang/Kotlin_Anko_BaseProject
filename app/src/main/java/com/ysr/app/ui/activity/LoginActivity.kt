@@ -1,4 +1,4 @@
-package com.ysr.app.moudle.view.activity
+package com.ysr.app.ui.activity
 
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.qihoo360.replugin.RePlugin

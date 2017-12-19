@@ -6,6 +6,7 @@ apply plugin: 'replugin-host-gradle'
 
 android {
     compileSdkVersion 26
+    buildToolsVersion '26.0.3'
     defaultConfig {
         applicationId "com.ysr.app"
         minSdkVersion 19
@@ -13,6 +14,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
         kapt {
             arguments {
                 arg("moduleName", project.getName())
@@ -29,6 +31,16 @@ android {
             buildConfigField "boolean", "LOG_DEBUG", "true"
         }
     }
+    //设置虚拟机堆内存空间大小，避免在编译期间OOM
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+    //打包不检查
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -37,6 +49,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation "org.jetbrains.anko:anko:$anko_version"
     implementation "com.android.support:appcompat-v7:$appcompat_v7_version"
+    compile "com.android.support:multidex:$multidex_version"
     implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
     kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
     compile "com.alibaba:arouter-api:$arouter_api_version"

@@ -1,4 +1,4 @@
-package com.ysr.app.ui
+package com.ysr.app.ui.activity
 
 import android.content.Context
 import android.text.InputType.TYPE_CLASS_TEXT
@@ -7,7 +7,6 @@ import android.view.Gravity
 import android.widget.Button
 import android.widget.EditText
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.qihoo360.replugin.RePlugin
 import com.ysr.app.R
 import com.ysr.app.base.AnkoBaseActivity
 import org.jetbrains.anko.*
