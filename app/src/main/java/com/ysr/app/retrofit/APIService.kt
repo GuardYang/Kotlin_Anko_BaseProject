@@ -7,7 +7,6 @@ import retrofit2.http.POST
 import retrofit2.http.Query
 import rx.Observable
 
-
 /**
  * @author yangshirong
  * @data 2017/12/19
@@ -23,4 +22,5 @@ interface APIService {
     @GET("homePageApi/homePage.do")
     fun getHomePage(@Query("RequestData") RequestData: String,
                     @Query("DataSign") DataSign: String): Observable<String>
+
 }

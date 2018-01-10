@@ -54,6 +54,8 @@ class UploadImgActivity : BaseActivity(), View.OnClickListener {
             }
             R.id.btn_upload -> {
 
+
+
             }
 
 
