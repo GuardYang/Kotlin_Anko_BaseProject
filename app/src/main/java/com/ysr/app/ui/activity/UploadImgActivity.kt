@@ -78,7 +78,7 @@ class UploadImgActivity : BaseActivity(), View.OnClickListener {
                         if (null != data) {
                             val imgPath: String
                             val uri = data!!.data
-                            if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT) {
+                            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
                                 imgPath = uri.getPath()
                             } else {
                                 imgPath = FileUtils.getRealFilePath(mContext, uri)
