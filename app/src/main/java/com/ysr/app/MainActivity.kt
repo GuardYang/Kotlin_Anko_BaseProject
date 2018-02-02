@@ -14,8 +14,8 @@ class MainActivity : BaseActivity() {
     }
 
     override fun initPresenter() {
-        textView.setOnClickListener({
-            ARouter.getInstance().build("/ui/LoginActivity").navigation()
+        btn_recorde.setOnClickListener({
+            ARouter.getInstance().build("/ui/video/RecordeActivity").navigation()
 //            startActivity(Intent(this, LoginActivity::class.java))
         })
     }
