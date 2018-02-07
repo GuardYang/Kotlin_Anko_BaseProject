@@ -376,19 +376,19 @@ public class TCVideoRecordActivity extends Activity implements View.OnClickListe
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
                 switch (checkedId) {
                     case R.id.rb_fast:
-                        mRecordSpeed = TXRecordCommon.RECORD_SPEED_FAST;
+                        mRecordSpeed = TXRecordCommon.RECORD_SPEED_SLOWEST;
                         break;
                     case R.id.rb_fastest:
-                        mRecordSpeed = TXRecordCommon.RECORD_SPEED_FASTEST;
+                        mRecordSpeed = TXRecordCommon.RECORD_SPEED_SLOW;
                         break;
                     case R.id.rb_normal:
                         mRecordSpeed = TXRecordCommon.RECORD_SPEED_NORMAL;
                         break;
                     case R.id.rb_slow:
-                        mRecordSpeed = TXRecordCommon.RECORD_SPEED_SLOW;
+                        mRecordSpeed = TXRecordCommon.RECORD_SPEED_FASTEST;
                         break;
                     case R.id.rb_slowest:
-                        mRecordSpeed = TXRecordCommon.RECORD_SPEED_SLOWEST;
+                        mRecordSpeed = TXRecordCommon.RECORD_SPEED_FAST;
                         break;
                 }
                 mTXCameraRecord.setRecordSpeed(mRecordSpeed);
