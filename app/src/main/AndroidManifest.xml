@@ -10,21 +10,16 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 拍照权限,允许访问摄像头进行拍照 -->
     <uses-permission android:name="android.permission.CAMERA" />
-
-
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <uses-feature android:name="android.hardware.Camera"/>
+    <uses-feature android:name="android.hardware.Camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-
-
 
     <application
         android:name=".base.BaseApplication"
@@ -44,7 +39,17 @@
         <activity android:name=".ui.activity.LoginActivity" />
         <activity android:name=".ui.activity.AnkoRegisterActivity" />
         <activity android:name=".ui.activity.UploadImgActivity" />
-        <activity android:name=".ui.video.RecordeActivity"></activity>
+        <activity android:name=".ui.video.RecordeActivity" />
+        <activity
+            android:name=".ui.videorecord.TCVideoRecordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".ui.videorecord.TCVideoPreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.videorecord.shortvideo.TCVideoPreprocessActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

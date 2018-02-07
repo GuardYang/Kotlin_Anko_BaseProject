@@ -15,7 +15,7 @@ class MainActivity : BaseActivity() {
 
     override fun initPresenter() {
         btn_recorde.setOnClickListener({
-            ARouter.getInstance().build("/ui/video/RecordeActivity").navigation()
+            ARouter.getInstance().build("/ui/videorecord/TCVideoRecordActivity").navigation()
 //            startActivity(Intent(this, LoginActivity::class.java))
         })
     }

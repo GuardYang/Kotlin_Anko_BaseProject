@@ -2,4 +2,16 @@
     <string name="app_name">插件化</string>
     <string name="hint_name">请输入用户名</string>
     <string name="hint_password">请输入密码</string>
+    <string name="vod_ffplay">ffplay</string>
+    <string name="vod_exo">exo</string>
+    <string name="delete">删除</string>
+    <string name="music_empty">空空如也</string>
+    <string name="music_loading">正在加载本地音乐...</string>
+    <string name="title_activity_rtmp_room_demo">RtmpRoomDemoActivity</string>
+    <string name="title_activity_test_test_test_acvitity">TestTestTestAcvitity</string>
+
+    <string name="rtmproom_room_iterm_members">%1$d 人在房间里...</string>
+    <string name="video_editer_set_speed">设置慢速片段</string>
+    <string name="video_editer_bubble">气泡字幕</string>
+    <string name="video_pre_process">视频预处理</string>
 </resources>
